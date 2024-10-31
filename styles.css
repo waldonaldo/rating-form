@@ -59,7 +59,7 @@ button:hover {
 }
 
 .logo {
-    width: 100px;  /* Adjust width */
+    width: 300px;  /* Adjust width */
     height: auto;  /* Maintains aspect ratio */
     margin: 0 auto; /* Centers the image */
     display: block;
