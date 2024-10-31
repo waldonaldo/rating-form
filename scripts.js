@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('rating-form');
-    const wsrBranchQuestions = document.querySelectorAll('.wsrb-branch');
+    const searchResultType = document.getElementById('search-result-type');
+    const scrbNote = document.getElementById('scrb-note');
 
-    form.addEventListener('change', function (e) {
-        if (e.target.value === 'WSRB') {
-            wsrBranchQuestions.forEach(question => question.style.display = 'block');
+    searchResultType.addEventListener('change', function () {
+        if (searchResultType.value === 'SCRB') {
+            scrbNote.style.display = 'block';
         } else {
-            wsrBranchQuestions.forEach(question => question.style.display = 'none');
+            scrbNote.style.display = 'none';
         }
     });
 });
