@@ -57,3 +57,10 @@ button {
 button:hover {
     background-color: #66cc00;
 }
+
+.logo {
+    width: 100px;  /* Adjust width */
+    height: auto;  /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image */
+    display: block;
+}
