@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.form-container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background: linear-gradient(45deg, #9361c5, #66cc00);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header .logo {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+section {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 8px;
+}
+
+button {
+    background-color: #9361c5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66cc00;
+}
