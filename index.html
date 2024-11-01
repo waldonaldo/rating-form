@@ -20,23 +20,24 @@
             <!-- First question for Rate Page Quality section -->
             <label for="search-result-type">What Kind of Search Result is it (Note: Special Content Result Block is SCRB while Web Search Result Block is WSRB):</label>
             <select id="search-result-type" name="search-result-type">
-                <option value="WSRB">WSRB</option>
-                <option value="WSRB-GovHealth">WSRB: Government / Reputable Health Website</option>
-                <option value="WRB-Article">WRB: Article</option>
-                <option value="WSRB-DualIntent">WSRB: Dual intent of Visit-in-person (VIP) or Website intent</option>
-                <option value="SCRB">SCRB</option>
-                <option value="WSRB-Encyclopedia">WSRB: Encyclopedia</option>
-                <option value="WSRB-Calculator">WSRB: Calculator</option>
-                <option value="WSRB-Recipe">WSRB: Recipe</option>
-                <option value="WSRB-OfficialWebsite">WSRB: Official Website of Query Term</option>
-                <option value="WSRB-Address">WSRB: Address</option>
-                <option value="WSRB-NameQuery">WSRB: Searching For a Name [Name Query]</option>
-                <option value="WSRB-SocialMedia">WSRB: Social Media (Twitter, Facebook, Pinterest, etc)</option>
-                <option value="WSRB-ErrorMessages">WSRB: Error Messages or No MC or Did Not Load</option>
-                <option value="WSRB-Forum">WSRB: Forum or Q&A Page</option>
-                <option value="HighQualityWebsite">A Website I Know is High Quality</option>
+            <option value="" disabled selected>Select a search result type</option>
+            <option value="WSRB">WSRB</option>
+            <option value="WSRB-GovHealth">WSRB: Government / Reputable Health Website</option>
+            <option value="WRB-Article">WRB: Article</option>
+            <option value="WSRB-DualIntent">WSRB: Dual intent of Visit-in-person (VIP) or Website intent</option>
+            <option value="SCRB">SCRB</option>
+            <option value="WSRB-Encyclopedia">WSRB: Encyclopedia</option>
+            <option value="WSRB-Calculator">WSRB: Calculator</option>
+            <option value="WSRB-Recipe">WSRB: Recipe</option>
+            <option value="WSRB-OfficialWebsite">WSRB: Official Website of Query Term</option>
+            <option value="WSRB-Address">WSRB: Address</option>
+            <option value="WSRB-NameQuery">WSRB: Searching For a Name [Name Query]</option>
+            <option value="WSRB-SocialMedia">WSRB: Social Media (Twitter, Facebook, Pinterest, etc)</option>
+            <option value="WSRB-ErrorMessages">WSRB: Error Messages or No MC or Did Not Load</option>
+            <option value="WSRB-Forum">WSRB: Forum or Q&A Page</option>
+            <option value="HighQualityWebsite">A Website I Know is High Quality</option>
             </select>
-            
+
             <!-- Conditional Note for SCRB -->
             <p id="scrb-note" style="display: none; color: #9361c5; font-style: italic;">
                 Note: You are basing your rating only on inside the block and nothing else. In most instances, you probably won't have to rate PQ for SCRB, but if you do, see below. Rate: Between Lowest and Highest (if it shows up).
@@ -152,6 +153,11 @@
             <h2>Rate Needs Met</h2>
             <!-- Insert additional questions for Needs Met here -->
         </section>
+        <!-- Button Container for Submit and Clear Form -->
+<div class="button-container">
+    <button type="submit" class="submit-btn">Submit</button>
+    <button type="button" class="clear-btn" onclick="clearForm()">Clear Form</button>
+</div>
     </div>
     <script src="scripts.js"></script>
 </body>
