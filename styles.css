@@ -44,7 +44,8 @@ input[type="checkbox"], input[type="radio"] {
     margin-right: 8px;
 }
 
-button {
+/* Updated styling for default buttons only */
+button.default-btn {
     background-color: #9361c5;
     color: white;
     border: none;
@@ -54,9 +55,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button.default-btn:hover {
     background-color: #66cc00;
 }
+
 
 .logo {
     width: 300px;  /* Adjust width */
