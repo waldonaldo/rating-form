@@ -64,3 +64,13 @@ button:hover {
     margin: 0 auto; /* Centers the image */
     display: block;
 }
+
+.checkbox-group, .radio-group, .rating-scale {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.rating-scale label, .radio-group label, .checkbox-group label {
+    display: inline-block;
+}
