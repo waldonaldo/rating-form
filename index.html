@@ -17,7 +17,7 @@
             <h2>Rate Page Quality</h2>
             <p><strong>General Rating Tips:</strong> Low Page Characteristics...</p>
 
-            <!-- First question for Rate Page Quality section -->
+            <!-- First question with dropdown -->
             <label for="search-result-type">What Kind of Search Result is it (Note: Special Content Result Block is SCRB while Web Search Result Block is WSRB):</label>
             <select id="search-result-type" name="search-result-type">
                 <option value="WSRB">WSRB</option>
@@ -37,15 +37,67 @@
                 <option value="HighQualityWebsite">A Website I Know is High Quality</option>
             </select>
             
-            <!-- Conditional Note for SCRB -->
-            <p id="scrb-note" style="display: none; color: #9361c5; font-style: italic;">
-                Note: You are basing your rating only on inside the block and nothing else. In most instances, you probably won't have to rate PQ for SCRB, but if you do, see below. Rate: Between Lowest and Highest (if it shows up).
-            </p>
-        </section>
+            <!-- Conditional WSRB questions -->
+            <div id="wsrb-questions" style="display: none;">
+                <h3>Additional Questions for WSRB</h3>
 
-        <section id="needs-met">
-            <h2>Rate Needs Met</h2>
-            <!-- Insert additional questions for Needs Met here -->
+                <!-- Check any that apply to the landing page -->
+                <label>1. Check any that apply to the landing page:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="landing-page" value="Porn in MC"> Porn in MC</label>
+                    <label><input type="checkbox" name="landing-page" value="Foreign Language"> Foreign Language</label>
+                    <label><input type="checkbox" name="landing-page" value="Didn't Load"> Didn't Load</label>
+                    <label><input type="checkbox" name="landing-page" value="MC is restricted or inaccessible"> MC is restricted or inaccessible</label>
+                </div>
+
+                <!-- Are any of the following statements true? -->
+                <label>2. Are any of the following statements true?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="statements-true" value="Yes"> Yes</label>
+                    <label><input type="radio" name="statements-true" value="No"> No</label>
+                    <label><input type="radio" name="statements-true" value="Maybe"> Maybe</label>
+                </div>
+
+                <!-- Main Content Quality -->
+                <label>3. Main Content Quality <img src="images/mcc.jpg" alt="Main Content Quality"></label>
+                <div class="rating-scale">
+                    <label><input type="radio" name="mc-quality" value="Lowest"> Lowest</label>
+                    <label><input type="radio" name="mc-quality" value="Low"> Low</label>
+                    <label><input type="radio" name="mc-quality" value="Medium"> Medium</label>
+                    <label><input type="radio" name="mc-quality" value="High"> High</label>
+                    <label><input type="radio" name="mc-quality" value="Highest"> Highest</label>
+                </div>
+
+                <!-- Repeat structure for other questions with images -->
+                <label>4. Page Content Quality: Title <img src="images/title.png" alt="Title Quality"></label>
+                <div class="rating-scale">
+                    <label><input type="radio" name="title-quality" value="Lowest"> Lowest</label>
+                    <label><input type="radio" name="title-quality" value="Low"> Low</label>
+                    <label><input type="radio" name="title-quality" value="Medium"> Medium</label>
+                    <label><input type="radio" name="title-quality" value="High"> High</label>
+                    <label><input type="radio" name="title-quality" value="Highest"> Highest</label>
+                </div>
+
+                <label>5. Page Content Quality: MC Identification</label>
+                <div class="rating-scale">
+                    <label><input type="radio" name="mc-identification" value="Lowest"> Lowest</label>
+                    <label><input type="radio" name="mc-identification" value="Low"> Low</label>
+                    <label><input type="radio" name="mc-identification" value="Medium"> Medium</label>
+                    <label><input type="radio" name="mc-identification" value="High"> High</label>
+                    <label><input type="radio" name="mc-identification" value="Highest"> Highest</label>
+                </div>
+
+                <label>6. Page Content Quality: MC Focus <img src="images/mcfocus.png" alt="MC Focus"></label>
+                <div class="rating-scale">
+                    <label><input type="radio" name="mc-focus" value="Lowest"> Lowest</label>
+                    <label><input type="radio" name="mc-focus" value="Low"> Low</label>
+                    <label><input type="radio" name="mc-focus" value="Medium"> Medium</label>
+                    <label><input type="radio" name="mc-focus" value="High"> High</label>
+                    <label><input type="radio" name="mc-focus" value="Highest"> Highest</label>
+                </div>
+
+                <!-- Continue for remaining sections similarly -->
+            </div>
         </section>
     </div>
     <script src="scripts.js"></script>
