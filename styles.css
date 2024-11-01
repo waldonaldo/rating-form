@@ -110,3 +110,55 @@ button.default-btn:hover {
 .clear-btn:hover {
     background-color: #e60000;
 }
+
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Customize slider appearance -- section starts for slider */
+#mc-quality-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+#mc-quality-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #9361c5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#mc-quality-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #9361c5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Tick marks and labels */
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+.slider-labels span {
+    position: relative;
+    text-align: center;
+}
+
