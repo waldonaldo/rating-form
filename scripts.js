@@ -21,5 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Clear form function
 function clearForm() {
-    document.getElementById('rating-form').reset();
+    const form = document.getElementById('rating-form');
+    form.reset();
+
+    // Hide WSRB questions and SCRB note to reset form state visually
+    document.getElementById('wsrb-questions').style.display = 'none';
+    document.getElementById('scrb-note').style.display = 'none';
 }
+
