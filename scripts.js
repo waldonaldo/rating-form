@@ -23,10 +23,3 @@ document.addEventListener('DOMContentLoaded', function () {
 function clearForm() {
     location.reload();
 }
-
-//slider function(S)
-const slider = document.getElementById('mc-quality-slider');
-slider.addEventListener('input', function() {
-    const labels = ["N/A", "Lowest", "Low", "Medium", "High", "Highest"];
-    slider.title = labels[slider.value];
-});
