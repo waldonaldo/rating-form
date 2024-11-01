@@ -19,14 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Clear form function with a reset delay
+// Clear form function 
 function clearForm() {
-    const form = document.getElementById('rating-form');
-    form.reset(); // Reset form fields
-
-    // Delay hiding elements to ensure full reset
-    setTimeout(function() {
-        document.getElementById('wsrb-questions').style.display = 'none';
-        document.getElementById('scrb-note').style.display = 'none';
-    }, 10); // 10 ms delay to ensure reset completion
+    location.reload();
 }
