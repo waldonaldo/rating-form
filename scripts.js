@@ -21,14 +21,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Clear form function
 function clearForm() {
-    const form = document.querySelector('.form-container');  // Adjust this selector to target your form container
-    const inputs = form.querySelectorAll('input, select, textarea');
-
-    inputs.forEach(input => {
-        if (input.type === 'checkbox' || input.type === 'radio') {
-            input.checked = false;
-        } else {
-            input.value = '';
-        }
-    });
+    document.getElementById('rating-form').reset();
 }
