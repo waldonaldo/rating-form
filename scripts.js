@@ -19,13 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Clear form function
+// Clear form function with a reset delay
 function clearForm() {
     const form = document.getElementById('rating-form');
-    form.reset();
+    form.reset(); // Reset form fields
 
-    // Hide WSRB questions and SCRB note to reset form state visually
-    document.getElementById('wsrb-questions').style.display = 'none';
-    document.getElementById('scrb-note').style.display = 'none';
+    // Delay hiding elements to ensure full reset
+    setTimeout(function() {
+        document.getElementById('wsrb-questions').style.display = 'none';
+        document.getElementById('scrb-note').style.display = 'none';
+    }, 10); // 10 ms delay to ensure reset completion
 }
-
