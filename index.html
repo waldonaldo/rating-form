@@ -68,14 +68,19 @@
                 </div>
 
                 <!-- Additional questions and rating scales for WSRB -->
-                <label>3. Main Content Quality <img src="images/mcc.png" alt="Main Content Quality"></label>
-                <div class="rating-scale">
-                    <label><input type="radio" name="mc-quality" value="Lowest"> Lowest</label>
-                    <label><input type="radio" name="mc-quality" value="Low"> Low</label>
-                    <label><input type="radio" name="mc-quality" value="Medium"> Medium</label>
-                    <label><input type="radio" name="mc-quality" value="High"> High</label>
-                    <label><input type="radio" name="mc-quality" value="Highest"> Highest</label>
-                </div>
+<label for="mc-quality-slider">3. Main Content Quality</label>
+<div class="slider-container">
+    <input type="range" id="mc-quality-slider" name="mc-quality" min="0" max="6" step="1">
+    <div class="slider-labels">
+        <span>N/A</span>
+        <span>Lowest</span>
+        <span>Low</span>
+        <span>Medium</span>
+        <span>High</span>
+        <span>Highest</span>
+    </div>
+</div>
+
 
                 <label>4. Page Content Quality: Title <img src="images/title.png" alt="Title Quality"></label>
                 <div class="rating-scale">
