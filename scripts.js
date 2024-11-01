@@ -18,3 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Clear form function
+function clearForm() {
+    document.querySelector('form').reset();
+}
