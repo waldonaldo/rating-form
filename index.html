@@ -80,8 +80,8 @@
 
 
                <label>4. Page Content Quality: Title</label>
-<table class="pq-table">
-    <thead>
+               <table class="pq-table">
+          <thead>
         <tr>
             <th>PQ Check</th>
             <th>Lowest</th>
@@ -113,14 +113,41 @@
 
 
                 <label>5. Page Content Quality: MC Identification</label>
-                <div class="rating-scale">
-                    <label><input type="radio" name="mc-identification" value="Lowest"> Lowest</label>
-                    <label><input type="radio" name="mc-identification" value="Low"> Low</label>
-                    <label><input type="radio" name="mc-identification" value="Medium"> Medium</label>
-                    <label><input type="radio" name="mc-identification" value="High"> High</label>
-                    <label><input type="radio" name="mc-identification" value="Highest"> Highest</label>
-                </div>
+<table class="pq-table">
+    <thead>
+        <tr>
+            <th>PQ Check</th>
+            <th>Lowest</th>
+            <th>Low</th>
+            <th>Medium</th>
+            <th>High</th>
+            <th>Highest</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Page Content: MC Identification</td>
+            <td>
+                - Deceptive page design<br>
+                - Page has characteristics of scams, malicious downloads, or other harmful behavior
+            </td>
+            <td>- Misleading page design</td>
+            <td colspan="3">Page design makes it clear what is MC, SC, and Ads</td>
+        </tr>
+    </tbody>
+</table>
 
+<!-- Radio buttons for Page Content Quality: MC Identification rating -->
+<div class="rating-scale">
+    <label><input type="radio" name="mc-identification" value="N/A"> N/A</label>
+    <label><input type="radio" name="mc-identification" value="Lowest"> Lowest</label>
+    <label><input type="radio" name="mc-identification" value="Low"> Low</label>
+    <label><input type="radio" name="mc-identification" value="Medium"> Medium</label>
+    <label><input type="radio" name="mc-identification" value="High"> High</label>
+    <label><input type="radio" name="mc-identification" value="Highest"> Highest</label>
+</div>
+
+                
                 <label>6. Page Content Quality: MC Focus <img src="images/mcfocus.png" alt="MC Focus"></label>
                 <div class="rating-scale">
                     <label><input type="radio" name="mc-focus" value="Lowest"> Lowest</label>
