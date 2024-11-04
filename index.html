@@ -214,14 +214,39 @@
 </div>
 
 
-                <label>8. Reputation of the Website <img src="images/reputation.png" alt="Reputation"></label>
-                <div class="rating-scale">
-                    <label><input type="radio" name="reputation-quality" value="Lowest"> Lowest</label>
-                    <label><input type="radio" name="reputation-quality" value="Low"> Low</label>
-                    <label><input type="radio" name="reputation-quality" value="Medium"> Medium</label>
-                    <label><input type="radio" name="reputation-quality" value="High"> High</label>
-                    <label><input type="radio" name="reputation-quality" value="Highest"> Highest</label>
-                </div>
+                <label>8. Reputation of the Website</label>
+<table class="pq-table">
+    <thead>
+        <tr>
+            <th>PQ Check</th>
+            <th>Lowest</th>
+            <th>Low</th>
+            <th>Medium</th>
+            <th>High</th>
+            <th>Highest</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Reputation of the website</td>
+            <td>- Negative reputation of the website: credible evidence of scams, malicious behavior, financially fraudulent behavior, website spreads hate</td>
+            <td>- Mildly negative reputation of the website or mixed reputation of a YMYL website according to real website users or experts in the topic</td>
+            <td>- Neither high nor low<br>- No safety concern according to scam detection or internet safety sites</td>
+            <td>- Positive reputation of the website according to real website users or experts in the topic</td>
+            <td>- Very positive reputation of the website according to people who use the website or experts in the topic</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Radio buttons for Reputation of the Website rating -->
+<div class="rating-scale">
+    <label><input type="radio" name="reputation-quality" value="Lowest"> Lowest</label>
+    <label><input type="radio" name="reputation-quality" value="Low"> Low</label>
+    <label><input type="radio" name="reputation-quality" value="Medium"> Medium</label>
+    <label><input type="radio" name="reputation-quality" value="High"> High</label>
+    <label><input type="radio" name="reputation-quality" value="Highest"> Highest</label>
+</div>
+
 
                 <label>9. Experience, Expertise, Authoritativeness, and Trust
                     <span style="font-style: italic;">(Note: Trust is extremely important for YMYL topics. Trust may be less important for some types of pages but is especially high for topics like medical, financial, and safety.)</span>
