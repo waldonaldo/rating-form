@@ -1,4 +1,4 @@
-// JavaScript to dynamically load content from external HTML files
+// Debugging the fetch request
 document.getElementById("search-result-type").addEventListener("change", async function () {
 	const dynamicContent = document.getElementById("dynamic-content");
 	const selectedValue = this.value;
@@ -8,8 +8,6 @@ document.getElementById("search-result-type").addEventListener("change", async f
 
 	try {
 		let response;
-
-		// Load appropriate questions based on the selection
 		switch (selectedValue) {
 			case "WSRB":
 				response = await fetch("content/WSRB.html");
@@ -20,25 +18,20 @@ document.getElementById("search-result-type").addEventListener("change", async f
 			default:
 				dynamicContent.innerHTML = `
 					<p>No specific questions for the selected type.</p>`;
-				return; // Stop execution for default case
+				return;
 		}
 
-		// Check if the response is successful
+		// Debug the response
+		console.log("Fetch Response:", response);
+
 		if (response.ok) {
 			const content = await response.text();
 			dynamicContent.innerHTML = content;
 		} else {
-			dynamicContent.innerHTML = `<p>Error loading content. Please try again later.</p>`;
+			dynamicContent.innerHTML = `<p>Error loading content. Status: ${response.status}</p>`;
 		}
 	} catch (error) {
 		console.error("Error fetching content:", error);
 		dynamicContent.innerHTML = `<p>Error loading content. Please try again later.</p>`;
 	}
 });
-
-// Clear form function
-function clearForm() {
-	document.getElementById("rating-form").reset();
-	document.getElementById("dynamic-content").innerHTML = `
-		<p>Please select an option to load the corresponding questions.</p>`;
-}
