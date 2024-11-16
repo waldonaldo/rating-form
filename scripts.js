@@ -1,27 +1,38 @@
-// JavaScript to dynamically load content based on selection
-document.getElementById("search-result-type").addEventListener("change", function () {
+// JavaScript to dynamically load content from external HTML files
+document.getElementById("search-result-type").addEventListener("change", async function () {
 	const dynamicContent = document.getElementById("dynamic-content");
 	const selectedValue = this.value;
 
 	// Clear the dynamic content first
-	dynamicContent.innerHTML = "";
+	dynamicContent.innerHTML = "Loading...";
 
-	// Load appropriate questions based on the selection
-	switch (selectedValue) {
-		case "WSRB":
-			dynamicContent.innerHTML = `
-				<h3>Additional Questions for WSRB</h3>
-				<p>Placeholder for WSRB-specific questions.</p>`;
-			break;
-		case "SCRB":
-			dynamicContent.innerHTML = `
-				<h3>Additional Questions for SCRB</h3>
-				<p>Placeholder for SCRB-specific questions.</p>`;
-			break;
-		default:
-			dynamicContent.innerHTML = `
-				<p>No specific questions for the selected type.</p>`;
-			break;
+	try {
+		let response;
+
+		// Load appropriate questions based on the selection
+		switch (selectedValue) {
+			case "WSRB":
+				response = await fetch("content/WSRB.html");
+				break;
+			case "SCRB":
+				response = await fetch("content/SCRB.html");
+				break;
+			default:
+				dynamicContent.innerHTML = `
+					<p>No specific questions for the selected type.</p>`;
+				return; // Stop execution for default case
+		}
+
+		// Check if the response is successful
+		if (response.ok) {
+			const content = await response.text();
+			dynamicContent.innerHTML = content;
+		} else {
+			dynamicContent.innerHTML = `<p>Error loading content. Please try again later.</p>`;
+		}
+	} catch (error) {
+		console.error("Error fetching content:", error);
+		dynamicContent.innerHTML = `<p>Error loading content. Please try again later.</p>`;
 	}
 });
 
