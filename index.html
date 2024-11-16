@@ -20,25 +20,33 @@
 					<p><strong>General Rating Tips:</strong> Low Page Characteristics...</p>
 
 					<!-- First question for Rate Page Quality section -->
-					<label for="search-result-type">What Kind of Search Result is it (Note: Special Content Result Block is SCRB while Web Search Result Block is WSRB):</label>
-					<select id="search-result-type" name="search-result-type">
-						<option value="" disabled selected>Select a search result type</option>
-						<option value="WSRB">WSRB</option>
-						<option value="WSRB-GovHealth">WSRB: Government / Reputable Health Website</option>
-						<option value="WRB-Article">WRB: Article</option>
-						<option value="WSRB-DualIntent">WSRB: Dual intent of Visit-in-person (VIP) or Website intent</option>
-						<option value="SCRB">SCRB</option>
-						<option value="WSRB-Encyclopedia">WSRB: Encyclopedia</option>
-						<option value="WSRB-Calculator">WSRB: Calculator</option>
-						<option value="WSRB-Recipe">WSRB: Recipe</option>
-						<option value="WSRB-OfficialWebsite">WSRB: Official Website of Query Term</option>
-						<option value="WSRB-Address">WSRB: Address</option>
-						<option value="WSRB-NameQuery">WSRB: Searching For a Name [Name Query]</option>
-						<option value="WSRB-SocialMedia">WSRB: Social Media (Twitter, Facebook, Pinterest, etc)</option>
-						<option value="WSRB-ErrorMessages">WSRB: Error Messages or No MC or Did Not Load</option>
-						<option value="WSRB-Forum">WSRB: Forum or Q&A Page</option>
-						<option value="HighQualityWebsite">A Website I Know is High Quality</option>
-					</select>
+					<label for="search-result-type">
+    What Kind of Search Result is it (Note: Special Content Result Block is SCRB while Web Search Result Block is WSRB):
+</label>
+<select id="search-result-type" name="search-result-type">
+    <option value="" disabled selected>Select a search result type</option>
+    <option value="WSRB">WSRB</option>
+    <option value="WSRB-GovHealth">WSRB: Government / Reputable Health Website</option>
+    <option value="WRB-Article">WRB: Article</option>
+    <option value="WSRB-DualIntent">WSRB: Dual intent of Visit-in-person (VIP) or Website intent</option>
+    <option value="SCRB">SCRB</option>
+    <option value="WSRB-Encyclopedia">WSRB: Encyclopedia</option>
+    <option value="WSRB-Calculator">WSRB: Calculator</option>
+    <option value="WSRB-Recipe">WSRB: Recipe</option>
+    <option value="WSRB-OfficialWebsite">WSRB: Official Website of Query Term</option>
+    <option value="WSRB-Address">WSRB: Address</option>
+    <option value="WSRB-NameQuery">WSRB: Searching For a Name [Name Query]</option>
+    <option value="WSRB-SocialMedia">WSRB: Social Media (Twitter, Facebook, Pinterest, etc)</option>
+    <option value="WSRB-ErrorMessages">WSRB: Error Messages or No MC or Did Not Load</option>
+    <option value="WSRB-Forum">WSRB: Forum or Q&A Page</option>
+    <option value="HighQualityWebsite">A Website I Know is High Quality</option>
+</select>
+
+<!-- Placeholder for dynamic content -->
+<div id="dynamic-content">
+    <p>Please select an option to load the corresponding questions.</p>
+</div>
+
 
 					<!-- Conditional Note for SCRB -->
 					<p id="scrb-note" style="display: none; color: #9361c5; font-style: italic;">
