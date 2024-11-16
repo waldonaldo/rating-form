@@ -1,4 +1,3 @@
-// Debugging the fetch request
 document.getElementById("search-result-type").addEventListener("change", async function () {
 	const dynamicContent = document.getElementById("dynamic-content");
 	const selectedValue = this.value;
@@ -16,13 +15,9 @@ document.getElementById("search-result-type").addEventListener("change", async f
 				response = await fetch("content/SCRB.html");
 				break;
 			default:
-				dynamicContent.innerHTML = `
-					<p>No specific questions for the selected type.</p>`;
+				dynamicContent.innerHTML = `<p>No specific questions for the selected type.</p>`;
 				return;
 		}
-
-		// Debug the response
-		console.log("Fetch Response:", response);
 
 		if (response.ok) {
 			const content = await response.text();
@@ -35,3 +30,10 @@ document.getElementById("search-result-type").addEventListener("change", async f
 		dynamicContent.innerHTML = `<p>Error loading content. Please try again later.</p>`;
 	}
 });
+
+// Clear form function
+function clearForm() {
+	document.getElementById("rating-form").reset();
+	document.getElementById("dynamic-content").innerHTML = `
+		<p>Please select an option to load the corresponding questions.</p>`;
+}
